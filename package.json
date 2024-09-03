@@ -1,0 +1,38 @@
+{
+  "name": "my-electron-app",
+  "version": "1.1.0",
+  "description": "My Electron App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.mycompany.myapp",
+    "productName": "Organizador de Archivos",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "renderer.js",
+      "python/",
+      "node_modules/"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^25.3.0",
+    "electron-builder": "^24.3.0"
+  }
+}

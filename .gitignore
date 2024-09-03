@@ -1,0 +1,10 @@
+# Ignorar los archivos .exe grandes
+dist/organizador-archivos Setup 1.0.0.exe
+dist/win-unpacked/organizador-archivos.exe
+node_modules/electron/dist/electron.exe
+
+# Ignorar la carpeta node_modules
+node_modules/
+
+# Ignorar archivos de compilación
+dist/
