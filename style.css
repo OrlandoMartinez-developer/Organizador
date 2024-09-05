@@ -1,13 +1,39 @@
-  body {
-    font-family: 'Arial', sans-serif;
-  }
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+}
 
-  #result {
-    height: 200px;
-    overflow-y: auto;
-  }
+.card {
+  background-color: #ffffff;
+}
 
-  .card-header {
-    background-color: #007bff;
-    color: white;
-  }
+/* Progress Bar */
+.progress {
+  height: 1.5rem;
+}
+
+.progress-bar {
+  line-height: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Notifications */
+.alert {
+  display: none;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
