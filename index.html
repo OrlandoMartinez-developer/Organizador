@@ -4,35 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>File Organizer</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light">
-  <div class="container mt-5">
-    <div class="card shadow-sm">
-      <div class="card-header bg-primary text-white">
-        <h1 class="h5 mb-0">File Organizer</h1>
+<body class="bg-gray-100">
+  <div class="container mx-auto mt-10 px-4">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="bg-blue-600 text-white py-4 px-6">
+        <h1 class="text-lg font-semibold">File Organizer</h1>
       </div>
-      <div class="card-body">
-        <div class="mb-3">
-          <label for="directoryInput" class="form-label">Select Directory</label>
-          <input type="text" id="directoryInput" class="form-control" placeholder="Enter directory path...">
+      <div class="p-6">
+        <div class="mb-6">
+          <label for="directoryInput" class="block text-sm font-medium text-gray-700 mb-2">Select Directory</label>
+          <input type="text" id="directoryInput" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Enter directory path...">
         </div>
-        <div class="d-grid gap-2 d-md-block">
-          <button id="organize" class="btn btn-success me-2">Organize Files</button>
-          <button id="check-space" class="btn btn-warning me-2">Check Disk Space</button>
-          <button id="remove-duplicates" class="btn btn-danger">Remove Duplicates</button>
+        <div class="flex flex-wrap gap-4 mb-6">
+          <button id="organize" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition">Organize Files</button>
+          <button id="check-space" class="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600 transition">Check Disk Space</button>
+          <button id="remove-duplicates" class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition">Remove Duplicates</button>
         </div>
+        <!-- Progress and Notification Containers -->
+        <div id="progress-container" class="mb-6 hidden">
+          <div class="w-full bg-gray-200 rounded-full h-4">
+            <div id="progress" class="bg-blue-500 h-4 rounded-full" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div id="notification" class="hidden bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4" role="alert"></div>
       </div>
-      <div class="card-footer">
-        <pre id="result" class="bg-dark text-white p-3 rounded"></pre>
+      <div class="bg-gray-900 text-white p-6">
+        <pre id="result" class="whitespace-pre-wrap"></pre>
       </div>
     </div>
   </div>
 
   <script src="renderer.js"></script>
-  <!-- Bootstrap JS (Optional) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
