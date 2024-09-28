@@ -32,7 +32,7 @@ app.on('window-all-closed', () => {
   }
 });
 
-// IPC handlers to interact with Python scripts
+
 
 ipcMain.handle('organize-files', async (event, args) => {
   let options = {

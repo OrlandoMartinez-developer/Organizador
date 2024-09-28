@@ -1,11 +1,11 @@
 {
-  "name": "my-electron-app",
-  "version": "1.1.0",
-  "description": "My Electron App",
+  "name": "organizador-de-archivos",
+  "version": "1.2.0",
+  "description": "App que Organiza tus archivos",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder"
+    "build": "electron-rebuild && electron-builder"
   },
   "build": {
     "appId": "com.mycompany.myapp",
@@ -13,6 +13,7 @@
     "directories": {
       "output": "dist"
     },
+    "asar": false,
     "files": [
       "main.js",
       "index.html",
@@ -21,6 +22,7 @@
       "node_modules/"
     ],
     "win": {
+      "icon": "icon/Icon.ico",
       "target": [
         "nsis"
       ]
@@ -32,7 +34,14 @@
     }
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "electron": "^25.3.0",
-    "electron-builder": "^24.3.0"
+    "electron-builder": "^24.3.0",
+    "electron-rebuild": "^3.2.9",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "python-shell": "^5.0.0"
   }
 }
